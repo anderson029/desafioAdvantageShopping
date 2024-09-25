@@ -8,7 +8,7 @@ Funcionalidade: Validar produtos na ordem de pagamento
   Para realizar a compra
 
 Contexto: Acessar home
-  Dado que estou autenticado com o usuário "Anderson" e a senha "123456Aa"
+  Dado que estou autenticado com o usuário "ADMIN" e a senha "123456Aa"
 
 @positivo
 Cenário: Validar a quantidade de produtos adicionados no carrinho
