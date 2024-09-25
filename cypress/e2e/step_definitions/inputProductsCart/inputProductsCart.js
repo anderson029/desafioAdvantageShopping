@@ -1,10 +1,18 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
 import HomePage from '../../pageobjects/HomePage';
-const home = new HomePage;
-
 import CartPage from '../../pageobjects/CartPage';
+import RegisterUserPage from '../../pageobjects/RegisterUserPage';
+
+const home = new HomePage;
 const cart = new CartPage;
+const registerUser = new RegisterUserPage;
+
+before(() => {
+  // Cria a conta do usuário
+  registerUser.visitURl();
+  registerUser.fillForm();
+});
 
 Given("que estou na plataforma de ecommerce advantageonlineshopping", () => {
   home.visitURl();
@@ -20,8 +28,8 @@ Then("o produto é adicionado ao carrinho", () =>{
   cart.removeProduct();
 });
 
-Given("autenticado com o usuário {string} e a senha {string}", (user, password) => {
-  home.login(user, password);
+Given("autenticado com o usuário", () => {
+  home.login(registerUser.getUsername(), registerUser.getPassword());
 })
 
 Given("que estou na página de categorias Tablets", () => {

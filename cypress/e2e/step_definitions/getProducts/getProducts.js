@@ -1,7 +1,15 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-
 import HomePage from '../../pageobjects/HomePage';
+import RegisterUserPage from '../../pageobjects/RegisterUserPage';
+
 const home = new HomePage;
+const registerUser = new RegisterUserPage;
+
+before(() => {
+  // Cria a conta do usuário
+  registerUser.visitURl();
+  registerUser.fillForm();
+});
 
 Given("que acesso a url https://advantageonlineshopping.com/#/", () => {
   home.visitURl();
@@ -15,8 +23,8 @@ Then("é apresentado o produto correspondente", ()=> {
   home.validProduct('HP Z3200 WIRELESS MOUSE');
 })
 
-Given("autenticado com o usuário {string} e a senha {string}", (user, password) => {
-  home.login(user, password);
+Given("autenticado com o usuário", () => {
+  home.login(registerUser.getUsername(), registerUser.getPassword());
 })
 
 When("acesso a categoria Tablets", () => {

@@ -17,14 +17,14 @@ Cenário: Adicionar produto ao carrinho via busca sem logar.
 
 @positivo
 Cenário: Adicionar produto ao carrinho via busca logado.
-	E autenticado com o usuário "Anderson" e a senha "123456Aa"
+	E autenticado com o usuário 
 	Quando adiciono o produto HP Z3200 WIRELESS MOUSE
 	Então o produto é adicionado ao carrinho 
 
 @positivo
 Cenário: Adicionar produto ao carrinho sem logar e visualizar o produto após logado.
 	Quando adiciono o produto HP Z3200 WIRELESS MOUSE
-	E autenticado com o usuário "Anderson" e a senha "123456Aa"
+	E autenticado com o usuário 
 	Então o produto é adicionado ao carrinho
 
 @positivo
@@ -35,14 +35,14 @@ Cenário: Adicionar produto ao carrinho pelo shop Now
 
 @positivo
 Cenário: Remover o mesmo produto do carrinho que tenha cores diferentes
-	E autenticado com o usuário "Anderson" e a senha "123456Aa" 
+	E autenticado com o usuário  
 	E adiciono os produtos um de cada cor
 	Quando excluo um produto
 	Então é permitido a exclusão exibindo as informações somente do produto restante
 
 @positivo
 Cenário: Remover o mesmo produto do carrinho com mais de 1 unidade
-	E autenticado com o usuário "Anderson" e a senha "123456Aa"
+	E autenticado com o usuário 
   E adiciono os produtos iguais
 	Quando excluo o produto
 	Então é apresentado o carrinho vazio

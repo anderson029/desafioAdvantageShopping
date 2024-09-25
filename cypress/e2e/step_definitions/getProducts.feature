@@ -17,7 +17,7 @@ Cenário: Realizar busca por produtos sem usuário logado com a barra de busca.
 
 @positivo
 Cenário: Realizar busca por produtos com usuário logado com o barra de busca.
-	E autenticado com o usuário "Anderson" e a senha "123456Aa"
+	E autenticado com o usuário
 	Quando informo o produto HP Z3200 WIRELESS MOUSE
 	Então é apresentado o produto correspondente 
 

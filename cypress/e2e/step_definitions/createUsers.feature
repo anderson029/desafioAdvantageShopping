@@ -10,5 +10,5 @@ Funcionalidade: Criar usuário
 @positivo
 Cenário: Criar conta de usuário
   Dado que acesso o site do ecommerce
-	# Quando preencho o formulário
-	# Então minha conta é criada
+  Quando preencho o formulário
+	Então minha conta é criada

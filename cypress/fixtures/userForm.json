@@ -1,0 +1,13 @@
+{
+  "email": "Test@test.com",
+  "password": "123456Ac",
+  "confirmPassword": "123456Ac",
+  "firstName": "Admin",
+  "lastName": "test",
+  "phoneNumber": "11984848484",
+  "country": "Brazil",
+  "city": "São Paulo",
+  "address": "Singapura",
+  "state": "Sp",
+  "zipCode": "09350450"
+}
