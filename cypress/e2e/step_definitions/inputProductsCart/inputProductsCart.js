@@ -18,7 +18,7 @@ Given("que estou na plataforma de ecommerce advantageonlineshopping", () => {
   home.visitURl();
 });
 
-When("adiciono o produto HP Z3200 WIRELESS MOUSE",() => {
+When("adiciono o produto",() => {
   home.setProduct('HP Z3200 WIRELESS MOUSE');
   cart.addProduct();
 });
@@ -32,7 +32,7 @@ Given("autenticado com o usuário", () => {
   home.login(registerUser.getUsername(), registerUser.getPassword());
 })
 
-Given("que estou na página de categorias Tablets", () => {
+Given("que estou na página de uma categoria", () => {
   home.queryCategory();
 });
 
@@ -40,7 +40,7 @@ When("escolho o produto", () => {
   home.newProduct();
 });
 
-Then("é aberto detalhes do produto permitindo adicionar ao carrinho", () => {
+Then("são exibidas as informações do produto permitindo adicionar ao carrinho", () => {
   cart.addProductDetails();
   cart.openCart();
   
@@ -85,9 +85,9 @@ Then("é apresentado o carrinho vazio", () => {
   cy.get('.bigEmptyCart > .roboto-bold').contains('Your shopping cart is empty')
 });
 
-Given("que tenha um estoque de 10 itens do produto {string}", (product) => {
-  home.setProduct(product);
-
+Given("que tenha um estoque de 10 itens de um produto", () => {
+  home.setProduct("HP Z3200 WIRELESS MOUSE");
+  cy.wait(3000);
   cy.get('.AddToCard > .ng-scope').click(); 
 });
 

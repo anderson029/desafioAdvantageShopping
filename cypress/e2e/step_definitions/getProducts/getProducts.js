@@ -11,11 +11,11 @@ before(() => {
   registerUser.fillForm();
 });
 
-Given("que acesso a url https://advantageonlineshopping.com/#/", () => {
+Given("que acesso o site do e-commerce advantageonlineshopping", () => {
   home.visitURl();
 })
 
-When("informo o produto HP Z3200 WIRELESS MOUSE", ()=> {
+When("informo o produto", ()=> {
   home.setProduct('HP Z3200 WIRELESS MOUSE');
 })
 
@@ -27,11 +27,11 @@ Given("autenticado com o usuário", () => {
   home.login(registerUser.getUsername(), registerUser.getPassword());
 })
 
-When("acesso a categoria Tablets", () => {
+When("escolho por alguma categoria", () => {
   home.queryCategory();
 })
 
-Then("é apresentada a lista de produtos relacionada à categoria tablets", () => {
+Then("é apresentada a lista de produtos relacionados à categoria correspondente", () => {
   home.verifyProduct('TABLETS');
 })
 

@@ -8,23 +8,23 @@ Funcionalidade: Consultar produto
   Para realizar busca de produtos
 
 Contexto: Acessar home
-  Dado que acesso a url https://advantageonlineshopping.com/
+  Dado que acesso o site do e-commerce advantageonlineshopping
 
 @positivo
 Cenário: Realizar busca por produtos sem usuário logado com a barra de busca.
-	Quando informo o produto HP Z3200 WIRELESS MOUSE
+	Quando informo o produto
 	Então é apresentado o produto correspondente
 
 @positivo
 Cenário: Realizar busca por produtos com usuário logado com o barra de busca.
 	E autenticado com o usuário
-	Quando informo o produto HP Z3200 WIRELESS MOUSE
+	Quando informo o produto
 	Então é apresentado o produto correspondente 
 
 @positivo
 Cenário: Realizar busca ao clicar em um produto na home.
-	Quando acesso a categoria Tablets
-	Então é apresentada a lista de produtos relacionada à categoria tablets
+	Quando escolho por alguma categoria
+	Então é apresentada a lista de produtos relacionados à categoria correspondente
 
 @negativo
 Cenário: Realizar busca por um produto inexistente.
